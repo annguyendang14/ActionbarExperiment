@@ -34,8 +34,16 @@ public class MyFragmentPagerAdapter extends FragmentPagerAdapter{
 
     @Override
     public Fragment getItem(int position) {
-        if (position==0) {
-            return new BreakfastFragment();
+        switch (position){
+            case 0:
+                return new BreakfastFragment();
+            case 1:
+                return new LunchFragment();
+            case 2:
+                return new SnackFragment();
+            case 3:
+                return new DinnerFragment();
+
         }
         return new BreakfastFragment();
     }
